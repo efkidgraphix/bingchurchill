@@ -81,19 +81,4 @@ module.exports.run = async function({
     console.log(error);
   }
 };
-module.exports.handleEvent = async function({
-  api,
-  event,
-  prefix
-}) {
-  const {
-    threadID,
-    messageID,
-    body
-  } = event;
-  const message = prefix ? '🖥️𝙎𝙞𝙢𝙥𝙡𝙚 𝙘𝙝𝙖𝙩𝙗𝙤𝙩 current prefix is : ' + prefix : "🪩Sorry i don't have prefix";
-  if (body?.toLowerCase().startsWith('prefix')) {
-    api.sendMessage(message, threadID, messageID);
-  }
-  }
       
