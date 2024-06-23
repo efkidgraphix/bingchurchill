@@ -17,11 +17,11 @@ module.exports.config = {
 module.exports.run = async ({ api, event }) => {
 	try {
 		const ownerInfo = {
-			name: `𝐜𝐡𝐮𝐫𝐜𝐡𝐢𝐥𝐥`,
+			name: `𝙚𝙛𝙠𝙞𝙙 𝙜𝙖𝙢𝙚𝙧`,
 			gender: 'MALE',
-			age: '16',
+			age: '17',
 			height: '5,4',
-			facebookLink: `https://www.facebook.com/Churchill.Dev4100`,
+			facebookLink: `https://www.facebook.com/efkidtrapgamer`,
 			status: 'SINGLE'
 		};
 
@@ -66,7 +66,7 @@ Status: ${ownerInfo.status}
 		fs.unlinkSync(filePath); // delete the video after sending the message
 
 		if (event.body && event.body.toLowerCase().includes('owner')) {
-			api.setMessageReaction('😽', event.messageID, (err) => {}, true);
+			api.setMessageReaction('🖥️', event.messageID, (err) => {}, true);
 		}
 
 	} catch (error) {
