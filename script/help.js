@@ -33,7 +33,7 @@ module.exports.run = async function({
       eventCommands.forEach((eventCommand, index) => {
         helpMessage += `\t${index + 1}. 「 ${prefix}${eventCommand} 」\n`;
       });
-      helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. To view the next page, type '${prefix}help page number'. To view information about a specific command, type '${prefix}help command name'.Bot made on https://efkid-autobot.onrender.com 🖥️By EFKID GAMER`;
+      helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. To view the next page, type '${prefix}help page number'. To view information about a specific command, type '${prefix}help command name'.Bot made on https://efkid-autobot-wr6q.onrender.com🖥️By EFKID GAMER`;
       api.sendMessage(helpMessage, event.threadID, event.messageID);
     } else if (!isNaN(input)) {
       const page = parseInt(input);
@@ -46,7 +46,7 @@ module.exports.run = async function({
       }
       helpMessage += '\nEvent List:\n\n';
       eventCommands.forEach((eventCommand, index) => {
-        helpMessage += `\t${index + 1}. 「 ${prefix}${eventCommand} 」\n`;
+        helpMessage += `\t${index + 1}. ➛「 ${prefix}${eventCommand} 」\n`;
       });
       helpMessage += `\nPage ${page} of ${Math.ceil(commands.length / pages)}`;
       api.sendMessage(helpMessage, event.threadID, event.messageID);
