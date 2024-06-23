@@ -35,7 +35,7 @@ module.exports.run = async function ({ api, event, enableCommands, args, Utils, 
             let page = 1;
             let start = (page - 1) * pages;
             let end = start + pages;
-            let helpMessage = `🔴🟢🟡\n\n====『 𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗟𝗜𝗦𝗧 』====\n▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱\n\n♡  ∩_∩\n（„• ֊ •„)♡\n╭─∪∪───────────⟡`;
+            let helpMessage = `\n\n====『 🖥️𝙎𝙞𝙢𝙥𝙡𝙚 𝙘𝙝𝙖𝙩𝙗𝙤𝙩 𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗟𝗜𝗦𝗧 』====\n▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱\n\n♡  ∩_∩\n（„• ֊ •„)♡\n╭─∪∪───────────⟡`;
             for (let i = start; i < Math.min(end, commands.length); i++) {
                 helpMessage += `\n├ ✧『 ${i + 1} 』  ${prefix}${commands[i]}\n├──────────────⟡\t`;
             }
@@ -84,7 +84,7 @@ module.exports.run = async function ({ api, event, enableCommands, args, Utils, 
                 const message = ` 「 Command 」\n\n➛ Name: ${name}\n${versionMessage}${roleMessage}\n${aliasesMessage}${descriptionMessage}${usageMessage}${creditsMessage}${cooldownMessage}`;
                 api.sendMessage(message, event.threadID, event.messageID);
             } else {
-                api.sendMessage('Command not found.', event.threadID, event.messageID);
+                api.sendMessage('The command wasn't found on 𝙎𝙞𝙢𝙥𝙡𝙚 𝙘𝙝𝙖𝙩𝙗𝙤𝙩 .', event.threadID, event.messageID);
             }
         }
     } catch (error) {
